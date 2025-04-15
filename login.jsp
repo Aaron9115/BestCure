@@ -1,0 +1,75 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login - PharmaBestCure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css" />
+  </head>
+  <body>
+    <% String errorMessage = (String) request.getAttribute("errorMessage"); %>
+    <% String registerMessage = (String) request.getHeader("registerMessage"); %>
+    <% if (registerMessage != null) { %>
+    <div class="register-message"><%= registerMessage %></div>
+    <% } %>
+    <div class="container">
+      <div class="login-section">
+        <div class="logo"><i class="fas fa-first-aid"></i> Pharma BestCure</div>
+        <% if (errorMessage != null) { %>
+        <div class="error-message"><%= errorMessage %></div>
+        <% } %>
+        <div class="login-item">
+          <form action="loginServlet" method="post" class="form form-login">
+            <div class="form-field">
+              <label class="user" for="login-email">
+                <i class="fas fa-envelope"></i>
+                <span class="hidden">Email</span>
+              </label>
+              <input
+                id="login-email"
+                type="email"
+                class="form-input"
+                placeholder="Email"
+                name="userName"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label class="lock" for="login-password">
+                <i class="fas fa-lock"></i>
+                <span class="hidden">Password</span>
+              </label>
+              <input
+                id="login-password"
+                type="password"
+                class="form-input"
+                placeholder="Password"
+                name="userPwd"
+                required
+              />
+            </div>
+            <div class="form-field forget-password">
+              <a href="#" class="forget-text">Forget Password?</a>
+            </div>
+            <div class="form-field">
+              <input type="submit" value="Login" />
+            </div>
+            <div class="form-field">
+              Not Registered Yet?
+              <a href="${pageContext.request.contextPath}/userRegister" class="register-text">Register Here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="motivation-section">
+        <img
+          src="https://www.umary.edu/sites/default/files/styles/optimized/public/2021-09/HealthSciences-Pharmacy-CustomerPharmacist.jpg?itok=8VQODnpg"
+          class="motivation-image"
+          alt="Pharmacist"
+        />
+      </div>
+    </div>
+  </body>
+</html>

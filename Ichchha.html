@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ichchha Rawal</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        *
+        {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;  
+        }
+        body
+        {
+            background: #080808;
+            color: #fff;
+        }
+        .header
+        {
+            width: 100%;
+            height: 694px;
+            background-size: cover;
+            background-position: center;
+        }
+        .container
+        {
+            padding: 10px 10%;
+        }
+        nav
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .header-text
+        {
+            margin-top: 20%;
+            font-size: 30px;
+        }
+        .header-text h1
+        {
+            font-size: 60px;
+            margin-top: 20px;
+        }
+        .title
+        {
+            text-align: center;
+            margin: 0 auto 80px;
+            position: relative;
+            line-height: 60px;
+            color: #fff;
+        }
+        .title::after
+        {
+            content: '';
+            background: #fff;
+            width: 170px;
+            height: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .about
+        {
+           padding: 80px 0;
+           color: #ababab; 
+        }
+        .row
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .about-col-1
+        {
+            flex-basis: 35%;
+        }
+        .about-col-1 img
+        {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .about-col-2
+        {
+            flex-basis: 60%;
+        }
+        .subtitle
+        {
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .tab-titles
+        {
+            display: flex;
+            margin: 20px 0 40px;
+        }
+        .tab-links
+        {
+            margin-right: 50PX;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+        .tab-links::after
+        {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+        .tab-links.active-link::after
+        {
+           width: 50%; 
+        }
+        .tab-contents ul li
+        {
+            list-style: none;
+            margin: 10px 0;
+        }
+        .tab-contents ul li span
+        {
+            color: #fff;
+            font-size: 14px;
+        }
+        .tab-contents
+        {
+            display: none;
+        }
+        .tab-contents.active-tab
+        {
+            display: block;
+        }
+        .services
+        {
+            padding: 30px 0;
+        }
+        .services-list
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        .box
+        {
+            width: 20%;
+        }
+        .box ul li
+        {
+            list-style: none;
+            padding: 20px;
+            font-size: large;
+            color: #ababab;
+        }
+        .services-list div
+        {
+            background: #262626;
+            padding: 20px;
+            font-size: 17px;
+            font-weight: 300;
+            border-radius: 10px;
+        }
+        .box h2
+        {
+            color: #fff;
+            font-size: xx-large;
+        }
+        span
+        {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../JAVAAA/BestCure logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="tagline">
+            BestCure – Your Health, Our Priority.
+        </div>
+        <div class="contact">
+            <div class="phone">
+                <div class="phone_icon con">
+                    <img src="../JAVAAA/call.png" alt="" height="12px" width="12px">
+                </div>
+                <a href="tel:+9779842042356" style="font-size: 12px;">+9779842042356</a>
+            </div>
+            <div class="email">
+                <div class="email_icon con">
+                    <img src="../JAVAAA/gmail.png" alt="" height="12px" width="12px">
+                </div>
+                <a href="mailto:BestCure123@gmail.com" style="font-size: 12px;">BestCure2323@gmail.com</a>
+            </div>
+        </div>
+    </header>
+    <nav style="background-color: black;">
+        <div class="wrapper">
+            <a href="../index.html">Home Page</a>
+            <a href="../pages/product.html">Product Page</a>
+            <a href="../pages/about Us.html">About Us</a>
+            <a href="../pages/contact.html">Contact Page</a>
+            <a href="../pages/login.html">Login Page</a>
+        </div>
+    </nav>
+    <div class="header">
+        <div class="container">
+            <div class="header-text">
+                <h1>Hi , I'm <span style="font-size: 60px;">Ichchha</span> <br> Rawal.</h1>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="../JAVAAA/Ichchharawal.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p> I am Ichchha, a hardworking and ambitious Computing undergraduate with a fine blend of academic achievement and extracurricular pursuits. I am best suited to leveraging technical know-how, collaboration, and problem-solving to achieve success in group as well as independent work. I am dedicated to continued learning and productive input toward organizational and personal growth.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="services">
+        <div class="container">
+            <h1 class="title">My Qualities</h1>
+            <div class="services-list">
+                <div class="box">
+                    <h2>Soft Skills</h2>
+                    <ul>
+                        <li><span>Team Collaboration</span><br></li>
+                        <li><span>Creative Thinking</span><br></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h2>Hard Skills</h2>
+                    <ul>
+                        <li><span>HTML & CSS</span><br></li>
+                        <li><span>JavaScript</span><br></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h2>Education</h2>
+                    <ul>
+                        <li><span>School</span><br>St Mary's high School</li>
+                        <li><span>High-School</span><br>St Xavier's high School</li>
+                        <li><span>Current Pursuit</span><br>Bachelor's degree at Islington College</li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

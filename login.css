@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-section {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.motivation-section {
+  flex: 1;
+  background: #6b7280;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.motivation-content {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+.motivation-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.motivation-content p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.motivation-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  animation: imageFadeIn 1s ease-in-out;
+}
+
+@keyframes imageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+.error-message {
+  color: #f87171;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.register-message {
+  color: #34d399;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #1e3a8a;
+}
+
+.logo i {
+  font-size: 32px;
+  color: #f97316;
+}
+
+.login-item {
+  padding: 0;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-field label {
+  position: absolute;
+  left: 15px;
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 12px 12px 45px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2dd4bf;
+  box-shadow: 0 0 8px rgba(45, 212, 191, 0.3);
+}
+
+.form-input::placeholder {
+  color: #64748b;
+}
+
+.form-field.forget-password {
+  justify-content: flex-end;
+}
+
+.form-field .forget-text {
+  color: #2dd4bf;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.form-field .forget-text:hover {
+  color: #14b8a6;
+}
+
+.form-field input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1e3a8a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-field input[type="submit"]:hover {
+  background: #2563eb;
+}
+
+.form-field .register-text {
+  color: #2dd4bf;
+  font-size: 16px;
+  margin-left: 5px;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.form-field .register-text:hover {
+  color: #14b8a6;
+}
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    max-width: 400px;
+  }
+
+  .login-section,
+  .motivation-section {
+    flex: none;
+    width: 100%;
+  }
+
+  .motivation-section {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-section {
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .form-input,
+  .form-field input[type="submit"],
+  .form-field .register-text,
+  .form-field .forget-text {
+    font-size: 14px;
+  }
+
+  .motivation-content h2 {
+    font-size: 20px;
+  }
+
+  .motivation-content p {
+    font-size: 16px;
+  }
+}
